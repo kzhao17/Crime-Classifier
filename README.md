@@ -1,10 +1,10 @@
 # Crime-Classifier
 This project builds a K-Nearest Neighbours (KNN) multiclass classifier to predict 
-crime type from historical incident data published by the Vancouver Police Department (VPD). 
-The goal is to examine whether temporal and geographic features alone are meaningful predictors for distinguishing between crime categories for resource allocation and patrol scheduling.
+crime type from incident data published by the Vancouver Police Department (VPD). 
+The goal is to determine whether the timing and geographic location of a crime are meaningful predictors for distinguishing between crime categories for resource allocation and patrol scheduling.
 
-Model performance is evaluated on a held-out test set to ensure results generalize to 
-unseen data, and hyperparameter tuning is performed via cross-validation to select the 
+Model performance is evaluated on a test set to ensure results generalize to 
+unseen data, and parameter tuning is performed via cross-validation to select the 
 optimal `k`.
 
 ---
@@ -45,7 +45,7 @@ Theft of Bicycle, Homicide, and Vehicle Collision (with Injury/Fatality).
 
 2. **Data cleaning and sampling** — Removed incomplete records/observations and converted categorical variables to numerical   representations for use in the KNN algorithm. A 3% sample was taken from the original dataset. All numerical data was then scaled and centred.
 
-3. **Train/test split** — Data was partitioned into training and held-out test sets.
+3. **Train/test split** — Data was partitioned into training and test sets.
 
 4. **Hyperparameter tuning** — A `tune_grid()` search over a range of `k` values was 
    run using v-fold cross-validation on the training set. 
